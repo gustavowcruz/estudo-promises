@@ -1490,3 +1490,31 @@
   "desconto": 0,
   "url": "https://store.steampowered.com/app/504230/"
 },
+{
+  "id": 391540,
+  "nome": "Undertale",
+  "preco": "R$ 4,99",
+  "desconto": 75,
+  "url": "https://store.steampowered.com/app/391540/"
+},
+{
+  "id": 774361,
+  "nome": "Blasphemous",
+  "preco": "R$ 133,90",
+  "desconto": 0,
+  "url": "https://store.steampowered.com/app/774361/"
+},
+{
+  "id": 2114740,
+  "nome": "Blasphemous 2",
+  "preco": "R$ 98,99",
+  "desconto": 40,
+  "url": "https://store.steampowered.com/app/2114740/"
+},
+{
+  "id": 485510,
+  "nome": "Nioh: Complete Edition",
+  "preco": "R$ 37,35",
+  "desconto": 85,
+  "url": "https://store.steampowered.com/app/485510/"
+},
