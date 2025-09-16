@@ -1,0 +1,23 @@
+{
+  "name": "estudo-promises",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/gustavowcruz/estudo-promises#readme",
+  "bugs": {
+    "url": "https://github.com/gustavowcruz/estudo-promises/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavowcruz/estudo-promises.git"
+  },
+  "license": "ISC",
+  "author": "Gustavo Wagner Cruz Cunha",
+  "type": "commonjs",
+  "main": "buscar_precos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.12.2"
+  }
+}
