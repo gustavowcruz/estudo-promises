@@ -1,0 +1,58 @@
+[
+    {
+    "Id": 1030300,
+    "Nome": "Hollow Knight: Silksong",
+    "Preco": "R$ 59,99",
+    "Desconto": 0,
+    "URL": "https://store.steampowered.com/app/1030300/"
+    },
+    {
+    "Id": 391540,
+    "Nome": "Undertale",
+    "Preco": "R$ 4,99",
+    "Desconto": 75,
+    "URL": "https://store.steampowered.com/app/391540/"
+    },
+    {
+    "Id": 504230,
+    "Nome": "Celeste",
+    "Preco": "R$ 59,99",
+    "Desconto": 0,
+    "URL": "https://store.steampowered.com/app/504230/"
+    },
+    {
+    "Id": 485510,
+    "Nome": "Nioh: Complete Edition",
+    "Preco": "R$ 37,35",
+    "Desconto": 85,
+    "URL": "https://store.steampowered.com/app/485510/"
+    },
+    {
+    "Id": 2114740,
+    "Nome": "Blasphemous 2",
+    "Preco": "R$ 98,99",
+    "Desconto": 40,
+    "URL": "https://store.steampowered.com/app/2114740/"
+    },
+    {
+    "Id": 730,
+    "Nome": "Counter-Strike 2",
+    "Preco": "Gratuito",
+    "Desconto": null,
+    "URL": "https://store.steampowered.com/app/730/"
+    },
+    {
+    "Id": 774361,
+    "Nome": "Blasphemous",
+    "Preco": "R$ 133,90",
+    "Desconto": 0,
+    "URL": "https://store.steampowered.com/app/774361/"
+    },
+    {
+    "Id": 1809540,
+    "Nome": "Nine Sols",
+    "Preco": "R$ 88,99",
+    "Desconto": 0,
+    "URL": "https://store.steampowered.com/app/1809540/"
+    }
+]
