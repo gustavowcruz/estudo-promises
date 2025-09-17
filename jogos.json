@@ -54,5 +54,104 @@
     "preco_inicial": "R$ 249,00",
     "desconto": 85,
     "url": "https://store.steampowered.com/app/485510/"
+  },
+  {
+    "id": 1057090,
+    "nome": "Ori and the Will of the Wisps",
+    "preco": "R$ 129,00",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1057090/header.jpg?t=1701967625",
+    "url": "https://store.steampowered.com/app/1057090/",
+    "preco_real": 129,
+    "preco_inicial_real": 129
+  },
+  {
+    "id": 588650,
+    "nome": "Dead Cells",
+    "preco": "R$ 23,74",
+    "preco_inicial": "R$ 47,49",
+    "desconto": 50,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg?t=1757600364",
+    "url": "https://store.steampowered.com/app/588650/",
+    "preco_real": 23.74,
+    "preco_inicial_real": 47.49
+  },
+  {
+    "id": 1145350,
+    "nome": "Hades II",
+    "preco": "R$ 88,99",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/1aaa69012e49f17ed2d26fe1e104c294dce15373/header.jpg?t=1757720950",
+    "url": "https://store.steampowered.com/app/1145350/",
+    "preco_real": 88.99,
+    "preco_inicial_real": 88.99
+  },
+  {
+    "id": 2344520,
+    "nome": "Diablo® IV",
+    "preco": "R$ 229,90",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/header.jpg?t=1754526062",
+    "url": "https://store.steampowered.com/app/2344520/",
+    "preco_real": 229.9,
+    "preco_inicial_real": 229.9
+  },
+  {
+    "id": 742300,
+    "nome": "Mega Man 11",
+    "preco": "R$ 42,57",
+    "preco_inicial": "R$ 129,00",
+    "desconto": 67,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/742300/header.jpg?t=1701220165",
+    "url": "https://store.steampowered.com/app/742300/",
+    "preco_real": 42.57,
+    "preco_inicial_real": 129
+  },
+  {
+    "id": 3180070,
+    "nome": "No, I'm not a Human",
+    "preco": "R$ 42,29",
+    "preco_inicial": "R$ 46,99",
+    "desconto": 10,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3180070/fadebc14211b17b5a6603926612ead9294cad9ce/header.jpg?t=1758094479",
+    "url": "https://store.steampowered.com/app/3180070/",
+    "preco_real": 42.29,
+    "preco_inicial_real": 46.99
+  },
+  {
+    "id": 2751000,
+    "nome": "Prince of Persia The Lost Crown",
+    "preco": "R$ 199,99",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2751000/header.jpg?t=1736259456",
+    "url": "https://store.steampowered.com/app/2751000/",
+    "preco_real": 199.99,
+    "preco_inicial_real": 199.99
+  },
+  {
+    "id": 813230,
+    "nome": "ANIMAL WELL",
+    "preco": "R$ 56,24",
+    "preco_inicial": "R$ 74,99",
+    "desconto": 25,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813230/header.jpg?t=1736282851",
+    "url": "https://store.steampowered.com/app/813230/",
+    "preco_real": 56.24,
+    "preco_inicial_real": 74.99
+  },
+  {
+    "id": 105600,
+    "nome": "Terraria",
+    "preco": "R$ 32,99",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1731252354",
+    "url": "https://store.steampowered.com/app/105600/",
+    "preco_real": 32.99,
+    "preco_inicial_real": 32.99
   }
 ]
