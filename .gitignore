@@ -1,0 +1,8 @@
+# Ignorar arquivos e pastas comuns do Node.js
+node_modules/
+.env
+*.log
+anunciados.json
+jogos.json
+ids.json
+webhook_url.txt
