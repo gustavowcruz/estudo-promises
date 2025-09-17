@@ -1,7 +1,7 @@
 const fs = require('fs');
 const axios = require('axios');
 
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1417555779480846337/sgwsh4qta7jnQXMaRhkowErHmPh6m-jyI34bXhFlsU8tKGDbQoX3iEGMbkqu4zrVfEQD";
+const WEBHOOK_URL = "***";
 
 function adcionarJogoJSON(jogo) {
     const arquivo = 'jogos.json';
