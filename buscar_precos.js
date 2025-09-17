@@ -3,51 +3,169 @@ const axios = require('axios');
 
 const WEBHOOK_URL = "https://discord.com/api/webhooks/1417555779480846337/sgwsh4qta7jnQXMaRhkowErHmPh6m-jyI34bXhFlsU8tKGDbQoX3iEGMbkqu4zrVfEQD";
 
+function adcionarJogoJSON(jogo) {
+    const arquivo = 'jogos.json';
+    let jogos = [];
+    
+    try {
+        if (fs.existsSync(arquivo)) {
+            const conteudo = fs.readFileSync(arquivo, 'utf-8');
+            jogos = JSON.parse(conteudo);
+        }
+    } catch (e) {
+        console.error('Erro ao ler jogos.json:', e);
+    }
+
+    const ja_existe = jogos.some(j => j.id === jogo.id);
+    if (!ja_existe) {
+        jogos.push(jogo);
+        const jogosJSON = JSON.stringify(jogos, null, 2);
+        console.log(jogosJSON);
+        fs.writeFile(arquivo, jogosJSON, (err) => {
+            if (err) {
+                console.error('Erro ao salvar dados no arquivo', err);
+            }
+        });
+    } else {
+        console.log(`Jogo com id ${jogo.id} já existe em jogos.json, não será adicionado novamente.`);
+    }
+}
+
+function adcionarIdJogoJSON(id) {
+    const arquivo = 'ids.json';
+    let ids = [];
+
+    try {
+        if (fs.existsSync(arquivo)) {
+            const conteudo = fs.readFileSync(arquivo, 'utf-8');
+            ids = JSON.parse(conteudo);
+        }
+    } catch (e) {
+        console.error('Erro ao ler ids.json:', e);
+    }
+
+    const ja_existe = ids.some(i => i === id);
+    if (!ja_existe) {
+        ids.push(id);
+        const idsJSON = JSON.stringify(ids, null, 2);
+        fs.writeFile(arquivo, idsJSON, (err) => {
+            if (err) {
+                console.error('Erro ao salvar dados no arquivo', err);
+            }
+        });
+    } else {
+        console.log(`ID ${id} já existe em ids.json, não será adicionado novamente.`);
+    }
+}
+
 const buscarPrecoSteam = async (id, codigo_pais='BR') => {
     try {
         const response = await fetch(`https://store.steampowered.com/api/appdetails?appids=${id}&cc=${codigo_pais}&l=portuguese`);
         const data = await response.json();
         if(data[id]['success'] === true){
-            const gratuidade = data[id]['data']['is_free'];
+            const gratuidade = data[id]['data']['is_free'] ? true : false;
             const nome = data[id]['data']['name'];
             const preco = gratuidade === true ? 'Gratuito' : data[id]['data']['price_overview']['final_formatted'];
+            const preco_inicial = gratuidade === true ? 'Gratuito' : data[id]['data']['price_overview'] ? data[id]['data']['price_overview']['initial_formatted'] : 'Indisponível';
             const desconto = gratuidade ? 0 : (data[id]['data']['price_overview'] ? data[id]['data']['price_overview']['discount_percent'] > 0 ? data[id]['data']['price_overview']['discount_percent'] : 0 : 0);
             const url = `https://store.steampowered.com/app/${id}/`;
+            const imagem = data[id]['data']['header_image'];
 
-            const jogo = {
+            const jogos =
+            {
                 id: id,
                 nome: nome,
                 preco: preco,
+                preco_inicial: preco_inicial,
                 desconto: desconto,
-                url: url
+                imagem: imagem,
+                url: url        
             };
 
-            const jogoJSON = JSON.stringify(jogo, null, 2) + ',\n';
-            console.log(jogoJSON);
+            adcionarJogoJSON(jogos);
+            adcionarIdJogoJSON(id);
+            return jogos;
 
-            fs.appendFile('jogos.json', jogoJSON, (err) => {
-                if (err) {
-                    console.error('Erro ao salvar dados no arquivo', err);
-                }
-            });
+        } else {
+            console.error(`Erro ao buscar dados do jogo com ID ${id}`);
+            return null;
         }
-    } catch (e) {
-        console.error('Erro ao buscar dados da API', e);
+    } catch (error) {
+            console.error('Erro na requisição:', error);
+            return null;
+        }
     }
-};
 
 async function exibirPreco() {
-    const ids = [1030300,1809540,504230,391540,774361,2114740, 485510, 730];
+    const ids = fs.existsSync('ids.json') ? JSON.parse(fs.readFileSync('ids.json', 'utf-8')) : [];
     for (const id of ids) {
         await buscarPrecoSteam(id);
-        await new Promise(resolve => setTimeout(resolve, 5000)); // 5 segundos entre requisições
+        await new Promise(resolve => setTimeout(resolve, 2000)); // 2 segundos entre requisições
     }
 }
 
+async function enviarNotificacaoDiscord(jogo){
+    if (!jogo) {
+        console.error('Objeto jogo não fornecido para enviarNotificacaoDiscord');
+        return;
+    }
+
+    const preco = jogo.preco;
+    const preco_inicial = jogo.preco_inicial;
+    const cor_embed = 0x28a745;
+    const mensagem_promo = `O jogo **${jogo.nome}** está em promoção na Steam!`;
+
+    const payload = {
+        content: mensagem_promo,
+        embeds: [
+            {
+                image: jogo.imagem ? { url: jogo.imagem } : undefined,
+                title: jogo.nome,
+                url: jogo.url,
+                color: cor_embed,
+                fields: [
+                    {
+                        name: "De:",
+                        value: `~~${preco_inicial}~~`,
+                        inline: true
+
+                    },
+                    {
+                        name: "Por:",
+                        value: `**${preco}**`,
+                        inline: true
+                    },
+                ],
+                footer: {
+                    text: "Notificação enviada via Webhook"
+                }
+            }
+        ]
+            };
+    try {
+        await axios.post(WEBHOOK_URL, payload);
+        console.log('Notificação enviada com sucesso!');
+    } catch (error) {
+        console.error('Erro ao enviar notificação:', error);
+    }
+}
+
+async function monitorarPrecos(jogo){
+    const ids = fs.existsSync('ids.json') ? JSON.parse(fs.readFileSync('ids.json', 'utf-8')) : [];
+    for(const id of ids){
+        const jogo = await buscarPrecoSteam(id);
+        if(jogo && jogo.desconto > 0){
+            await enviarNotificacaoDiscord(jogo);
+        }
+    }
+}
+
+
 (async function cicloDeBusca() {
     await exibirPreco();
+    await monitorarPrecos();
 
-    setTimeout(cicloDeBusca, 60000);
+    setTimeout(cicloDeBusca, 600000);
 })();
 
-module.exports = { buscarPrecoSteam, exibirPreco };
+module.exports = { buscarPrecoSteam, exibirPreco};
