@@ -186,5 +186,38 @@
     "url": "https://store.steampowered.com/app/203160/",
     "preco_real": 9.37,
     "preco_inicial_real": 62.49
+  },
+  {
+    "id": 524220,
+    "nome": "NieR:Automata™",
+    "preco": "R$ 107,00",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/header.jpg?t=1758094046",
+    "url": "https://store.steampowered.com/app/524220/",
+    "preco_real": 107,
+    "preco_inicial_real": 107
+  },
+  {
+    "id": 2552430,
+    "nome": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+    "preco": "R$ 219,90",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2552430/header.jpg?t=1726050740",
+    "url": "https://store.steampowered.com/app/2552430/",
+    "preco_real": 219.9,
+    "preco_inicial_real": 219.9
+  },
+  {
+    "id": 1687950,
+    "nome": "Persona 5 Royal",
+    "preco": "R$ 249,90",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg?t=1733297467",
+    "url": "https://store.steampowered.com/app/1687950/",
+    "preco_real": 249.9,
+    "preco_inicial_real": 249.9
   }
 ]
