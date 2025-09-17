@@ -1,7 +1,7 @@
 const fs = require('fs');
 const axios = require('axios');
 
-const WEBHOOK_URL = "";
+const WEBHOOK_URL = fs.readFileSync('webhook_url.txt', 'utf-8').trim();
 
 function adcionarJogoJSON(jogo) {
     const arquivo = 'jogos.json';
