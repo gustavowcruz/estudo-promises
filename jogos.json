@@ -1,11 +1,58 @@
 [
   {
+    "id": 39140,
+    "nome": "FINAL FANTASY VII",
+    "preco": "R$ 7,99",
+    "preco_inicial": "R$ 19,99",
+    "desconto": 60,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/39140/header.jpg?t=1734374610",
+    "url": "https://store.steampowered.com/app/39140/",
+    "preco_real": 7.99,
+    "preco_inicial_real": 19.99
+  },
+  {
+    "id": 312750,
+    "nome": "Final Fantasy IV (3D Remake)",
+    "preco": "R$ 14,99",
+    "preco_inicial": "R$ 29,99",
+    "desconto": 50,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312750/header.jpg?t=1624982557",
+    "url": "https://store.steampowered.com/app/312750/",
+    "preco_real": 14.99,
+    "preco_inicial_real": 29.99
+  },
+  {
+    "id": 377840,
+    "nome": "FINAL FANTASY IX",
+    "preco": "R$ 15,79",
+    "preco_inicial": "R$ 39,49",
+    "desconto": 60,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377840/header.jpg?t=1751854950",
+    "url": "https://store.steampowered.com/app/377840/",
+    "preco_real": 15.79,
+    "preco_inicial_real": 39.49
+  },
+  {
+    "id": 391220,
+    "nome": "Rise of the Tomb Raider™",
+    "preco": "R$ 12,49",
+    "preco_inicial": "R$ 124,99",
+    "desconto": 90,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg?t=1729011444",
+    "url": "https://store.steampowered.com/app/391220/",
+    "preco_real": 12.49,
+    "preco_inicial_real": 124.99
+  },
+  {
     "id": 1030300,
     "nome": "Hollow Knight: Silksong",
     "preco": "R$ 59,99",
     "preco_inicial": "",
     "desconto": 0,
-    "url": "https://store.steampowered.com/app/1030300/"
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1756994410",
+    "url": "https://store.steampowered.com/app/1030300/",
+    "preco_real": 59.99,
+    "preco_inicial_real": 59.99
   },
   {
     "id": 1809540,
@@ -13,7 +60,10 @@
     "preco": "R$ 88,99",
     "preco_inicial": "",
     "desconto": 0,
-    "url": "https://store.steampowered.com/app/1809540/"
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1809540/header.jpg?t=1746508887",
+    "url": "https://store.steampowered.com/app/1809540/",
+    "preco_real": 88.99,
+    "preco_inicial_real": 88.99
   },
   {
     "id": 504230,
@@ -21,15 +71,21 @@
     "preco": "R$ 59,99",
     "preco_inicial": "",
     "desconto": 0,
-    "url": "https://store.steampowered.com/app/504230/"
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1714089525",
+    "url": "https://store.steampowered.com/app/504230/",
+    "preco_real": 59.99,
+    "preco_inicial_real": 59.99
   },
   {
     "id": 391540,
     "nome": "Undertale",
-    "preco": "R$ 4,99",
-    "preco_inicial": "R$ 19,99",
-    "desconto": 75,
-    "url": "https://store.steampowered.com/app/391540/"
+    "preco": "R$ 19,99",
+    "preco_inicial": "",
+    "desconto": 0,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg?t=1757349115",
+    "url": "https://store.steampowered.com/app/391540/",
+    "preco_real": 19.99,
+    "preco_inicial_real": 19.99
   },
   {
     "id": 774361,
@@ -37,7 +93,10 @@
     "preco": "R$ 133,90",
     "preco_inicial": "",
     "desconto": 0,
-    "url": "https://store.steampowered.com/app/774361/"
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/774361/header.jpg?t=1753974290",
+    "url": "https://store.steampowered.com/app/774361/",
+    "preco_real": 133.9,
+    "preco_inicial_real": 133.9
   },
   {
     "id": 2114740,
@@ -45,7 +104,10 @@
     "preco": "R$ 98,99",
     "preco_inicial": "R$ 164,99",
     "desconto": 40,
-    "url": "https://store.steampowered.com/app/2114740/"
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2114740/header.jpg?t=1755016610",
+    "url": "https://store.steampowered.com/app/2114740/",
+    "preco_real": 98.99,
+    "preco_inicial_real": 164.99
   },
   {
     "id": 485510,
@@ -53,7 +115,10 @@
     "preco": "R$ 37,35",
     "preco_inicial": "R$ 249,00",
     "desconto": 85,
-    "url": "https://store.steampowered.com/app/485510/"
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/485510/header.jpg?t=1757650669",
+    "url": "https://store.steampowered.com/app/485510/",
+    "preco_real": 37.35,
+    "preco_inicial_real": 249
   },
   {
     "id": 1057090,
@@ -69,12 +134,12 @@
   {
     "id": 588650,
     "nome": "Dead Cells",
-    "preco": "R$ 23,74",
-    "preco_inicial": "R$ 47,49",
-    "desconto": 50,
+    "preco": "R$ 47,49",
+    "preco_inicial": "",
+    "desconto": 0,
     "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg?t=1757600364",
     "url": "https://store.steampowered.com/app/588650/",
-    "preco_real": 23.74,
+    "preco_real": 47.49,
     "preco_inicial_real": 47.49
   },
   {
@@ -83,7 +148,7 @@
     "preco": "R$ 88,99",
     "preco_inicial": "",
     "desconto": 0,
-    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/1aaa69012e49f17ed2d26fe1e104c294dce15373/header.jpg?t=1757720950",
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/91ac334a2c137d08968ccc0bc474a02579602100/header.jpg?t=1758818306",
     "url": "https://store.steampowered.com/app/1145350/",
     "preco_real": 88.99,
     "preco_inicial_real": 88.99
@@ -91,12 +156,12 @@
   {
     "id": 2344520,
     "nome": "Diablo® IV",
-    "preco": "R$ 229,90",
-    "preco_inicial": "",
-    "desconto": 0,
-    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/header.jpg?t=1754526062",
+    "preco": "R$ 103,45",
+    "preco_inicial": "R$ 229,90",
+    "desconto": 55,
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/80f21a42e378b93e8fbb68ee43103be8ab84891b/header.jpg?t=1758649357",
     "url": "https://store.steampowered.com/app/2344520/",
-    "preco_real": 229.9,
+    "preco_real": 103.45,
     "preco_inicial_real": 229.9
   },
   {
@@ -116,7 +181,7 @@
     "preco": "R$ 42,29",
     "preco_inicial": "R$ 46,99",
     "desconto": 10,
-    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3180070/fadebc14211b17b5a6603926612ead9294cad9ce/header.jpg?t=1758094479",
+    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3180070/fadebc14211b17b5a6603926612ead9294cad9ce/header.jpg?t=1758293511",
     "url": "https://store.steampowered.com/app/3180070/",
     "preco_real": 42.29,
     "preco_inicial_real": 46.99
@@ -135,12 +200,12 @@
   {
     "id": 813230,
     "nome": "ANIMAL WELL",
-    "preco": "R$ 56,24",
-    "preco_inicial": "R$ 74,99",
-    "desconto": 25,
+    "preco": "R$ 74,99",
+    "preco_inicial": "",
+    "desconto": 0,
     "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813230/header.jpg?t=1736282851",
     "url": "https://store.steampowered.com/app/813230/",
-    "preco_real": 56.24,
+    "preco_real": 74.99,
     "preco_inicial_real": 74.99
   },
   {
@@ -166,17 +231,6 @@
     "preco_inicial_real": 28.99
   },
   {
-    "id": 391220,
-    "nome": "Rise of the Tomb Raider™",
-    "preco": "R$ 12,49",
-    "preco_inicial": "R$ 124,99",
-    "desconto": 90,
-    "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg?t=1729011444",
-    "url": "https://store.steampowered.com/app/391220/",
-    "preco_real": 12.49,
-    "preco_inicial_real": 124.99
-  },
-  {
     "id": 203160,
     "nome": "Tomb Raider",
     "preco": "R$ 9,37",
@@ -190,12 +244,12 @@
   {
     "id": 524220,
     "nome": "NieR:Automata™",
-    "preco": "R$ 107,00",
-    "preco_inicial": "",
-    "desconto": 0,
+    "preco": "R$ 37,45",
+    "preco_inicial": "R$ 107,00",
+    "desconto": 65,
     "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/header.jpg?t=1758094046",
     "url": "https://store.steampowered.com/app/524220/",
-    "preco_real": 107,
+    "preco_real": 37.45,
     "preco_inicial_real": 107
   },
   {

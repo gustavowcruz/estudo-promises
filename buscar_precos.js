@@ -21,11 +21,7 @@ function adcionarJogoJSON(jogo) {
         jogos.push(jogo);
         const jogosJSON = JSON.stringify(jogos, null, 2);
         console.log(jogosJSON);
-        fs.writeFile(arquivo, jogosJSON, (err) => {
-            if (err) {
-                console.error('Erro ao salvar dados no arquivo', err);
-            }
-        });
+        fs.writeFileSync(arquivo, jogosJSON);
     } else {
         console.log(`Jogo com id ${jogo.id} já existe em jogos.json, não será adicionado novamente.`);
     }
@@ -58,7 +54,7 @@ function adcionarIdJogoJSON(id) {
     }
 }
 
-const buscarPrecoSteam = async (id, codigo_pais='BR') => {
+async function buscarPrecoSteam(id, codigo_pais='BR') {
     try {
         const response = await fetch(`https://store.steampowered.com/api/appdetails?appids=${id}&cc=${codigo_pais}&l=portuguese`);
         const data = await response.json();
@@ -66,7 +62,7 @@ const buscarPrecoSteam = async (id, codigo_pais='BR') => {
             const gratuidade = data[id]['data']['is_free'] ? true : false;
             const nome = data[id]['data']['name'];
             const preco = gratuidade === true ? 'Gratuito' : data[id]['data']['price_overview']['final_formatted'];            
-            const preco_inicial = gratuidade === true ? 'Gratuito' : data[id]['data']['price_overview'] ? data[id]['data']['price_overview']['initial_formatted'] : 'Indisponível';
+            const preco_inicial = gratuidade === true ? 'Gratuito' : data[id]['data']['price_overview'] ? data[id]['data']['price_overview']['initial_formatted'] : 'Preço Indisponível';
             const preco_real = gratuidade === true ? 0 : data[id]['data']['price_overview'] ? (data[id]['data']['price_overview']['final'] / 100) : 0;
             const preco_inicial_real = gratuidade === true ? 0 : data[id]['data']['price_overview'] ? (data[id]['data']['price_overview']['initial'] / 100) : 0;
             const desconto = gratuidade ? 0 : (data[id]['data']['price_overview'] ? data[id]['data']['price_overview']['discount_percent'] > 0 ? data[id]['data']['price_overview']['discount_percent'] : 0 : 0);
@@ -98,13 +94,13 @@ const buscarPrecoSteam = async (id, codigo_pais='BR') => {
             console.error('Erro na requisição:', error);
             return null;
         }
-    }
+}
 
 async function exibirPreco() {
     const ids = fs.existsSync('ids.json') ? JSON.parse(fs.readFileSync('ids.json', 'utf-8')) : [];
     for (const id of ids) {
         await buscarPrecoSteam(id);
-        await new Promise(resolve => setTimeout(resolve, 2000)); // 2 segundos entre requisições
+        await new Promise(resolve => setTimeout(resolve, 2000));
     }
 }
 
@@ -204,21 +200,20 @@ async function monitorarPrecos(){
     }
     
     function removerAnunciado(id) {
-    const arquivo = 'anunciados.json';
-    let anunciados = [];
-    try {
-        if (fs.existsSync(arquivo)) {
-            const conteudo = fs.readFileSync(arquivo, 'utf-8');
-            anunciados = JSON.parse(conteudo);
+        const arquivo = 'anunciados.json';
+        let anunciados = [];
+        try {
+            if (fs.existsSync(arquivo)) {
+                const conteudo = fs.readFileSync(arquivo, 'utf-8');
+                anunciados = JSON.parse(conteudo);
+            }
+        } catch (e) {
+            console.error('Erro ao ler anunciados.json:', e);
         }
-    } catch (e) {
-        console.error('Erro ao ler anunciados.json:', e);
-    }
-    const novoArray = anunciados.filter(item => item !== id);
-    fs.writeFileSync(arquivo, JSON.stringify(novoArray, null, 2));
+        const novoArray = anunciados.filter(item => item !== id);
+        fs.writeFileSync(arquivo, JSON.stringify(novoArray, null, 2));
     }
 }
-
 
 (async function cicloDeBusca() {
     await exibirPreco();
