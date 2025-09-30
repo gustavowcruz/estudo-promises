@@ -147,6 +147,7 @@ async function enviarNotificacaoDiscord(jogo){
         ]
             };
     try {
+
         await axios.post(WEBHOOK_URL, payload);
         console.log('Notificação enviada com sucesso!');
     } catch (error) {
@@ -160,6 +161,7 @@ async function monitorarPrecos(){
         const jogo = await buscarPrecoSteam(id);
         if(jogo) {
             if(jogo.desconto > 0 && !jaFoiAnunciado(jogo.id)){
+                
                 await enviarNotificacaoDiscord(jogo);
                 marcarAnunciado(jogo.id);
             } else if(jogo.desconto === 0 && jaFoiAnunciado(jogo.id)) {
